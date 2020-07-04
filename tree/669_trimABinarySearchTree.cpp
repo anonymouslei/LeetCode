@@ -93,16 +93,21 @@ void PrintTree(TreeNode* root) {
         PrintTree(root->right);
     }
 }
-void PrintTree(TreeNode* root) {
-    if(!root) {
-        cout<<"null ";
-        return;
-    };
-    if(!root->left && !root->right) {
-        cout<<root->val<<" ";
-    } else {
-        cout<<root->val<<" ";
-        PrintTree(root->left);
-        PrintTree(root->right);
-    }
+//int main()
+//{
+//    TreeNode* root=new TreeNode(2);
+//    root->left=new TreeNode(1);
+//    root->right=new TreeNode(3);
+//    PrintTree(root);
+//    std::cout<<std::endl;
+//
+//    TreeNode* t = Solution().trimBST(root, 3, 4);
+//    PrintTree(t);
+//    std::cout<<std::endl;
+//
+//     Original root was deleted
+//    PrintTree(root);
+//    std::cout<<std::endl;
+//
+//    return 0;
 }
