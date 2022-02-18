@@ -31,7 +31,7 @@ public:
             tmp = n_slow;
             n_slow = n_slow->next;
         }
-        tmp->next = n_slow->next;
+        tmp->next = n_slow->next;//这个变量其实也可以不需要
         return head;
     }
 };
