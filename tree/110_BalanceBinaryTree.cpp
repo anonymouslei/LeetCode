@@ -26,7 +26,7 @@ private:
 	int right_height = height(root->right, balanced);
 	if(!balanced) return -1;
 	if(abs(left_height-right_height)>1) {
-	    balance = false;
+	    balanced = false;
 	    return -1;
 	}
 	return max(left_height, right_height) + 1;
