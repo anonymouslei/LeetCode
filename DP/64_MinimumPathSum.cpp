@@ -2,6 +2,32 @@
 // Created by leige on 7/12/2020.
 //
 
+// write by myself
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+        // f(m, n) = f(m-1, n) + f(m, n-1)
+        if((m == 1) || (n == 1))
+            return 1;
+        
+        int res = 1;
+        int left = 0;
+        vector<int> up(n, 1);
+        for(int i = 1; i < m; i++)
+        {
+            res = 1;
+            for(int j = 0; j < n; j++)
+            {
+                res = left + up[j];
+                up[j] = res;
+                left = res;
+            }
+            left = 0;
+        }
+        return res;
+    }
+};
+
 // new solution
 // Runtime: 9 ms, faster than 78.04% of C++ online submissions for Minimum Path Sum.
 // Memory Usage: 9.8 MB, less than 75.41% of C++ online submissions for Minimum Path Sum.
